@@ -12,7 +12,7 @@
     Also, when shorthand is available, arguments are
     not parameterized. Learn CSS, not LESS Prefixer.
 
-	-------------------------------------------------
+    -------------------------------------------------
 	TABLE OF CONTENTS
 	(*) denotes a syntax-sugar helper
 	-------------------------------------------------
@@ -117,7 +117,7 @@
 
 /* Background Size */
 
-.background-size(@args)
+.background-size(@args) {
 	-webkit-background-size: @args;
 	-moz-background-size: @args;
 	background-size: @args;
@@ -139,7 +139,7 @@
 
 /* Box Shadows */
 .box-shadow(@args) {
-	-webkit-box-shadow: @args;
+    -webkit-box-shadow: @args;
 	-moz-box-shadow: @args;
 	box-shadow: @args;
 }
@@ -150,7 +150,7 @@
 
 /* Box Sizing */
 .box-sizing(@args){
-	-webkit-box-sizing: @args;
+    -webkit-box-sizing: @args;
 	-moz-box-sizing: @args;
 	box-sizing: @args;
 }
@@ -162,9 +162,10 @@
 }
 
 
+
 /* Columns */
 .columns(@args){
-	-webkit-columns: @args;
+    -webkit-columns: @args;
 	-moz-columns: @args;
 	columns: @args;
 }
@@ -205,8 +206,9 @@
 
 /* Opacity */
 .opacity(@factor){
-	opacity: @factor;
-	filter: alpha(opacity=@factor*100);
+    opacity: @factor;
+    @iefactor: @factor*100;
+	filter: alpha(opacity=@iefactor);
 }
 
 
