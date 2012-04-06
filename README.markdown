@@ -4,7 +4,7 @@ All of the CSS3 fun, none of the prefixes!
 
 ## What is it?
 
-LESS Prefixer is a set of [LESS](http://lesscss.org) mixins that let you use vendor-prefixed CSS properties without the prefixes. It uses some simple convetions and gets out of the way so you can use the CSS you already know, but with less typing.
+LESS Prefixer is a set of [LESS](http://lesscss.org/) mixins that let you use vendor-prefixed CSS properties without the prefixes. It uses some simple conventions and gets out of the way so you can use the CSS you already know, but with less typing.
 
 ## How does it work?
 
@@ -28,7 +28,7 @@ The convention is simple: when shorthand is available, arguments are not paramet
 
 ## What's Supported
 
-A whole bunch. There is a nice Table on Contents in the file so you can look this up quickly while working in your project. Everything is even alphabatized.
+A whole bunch. There is a nice Table of Contents in the file so you can look this up quickly while working in your project. Everything is even alphabetized.
 
 * .animation(@args)
 	* .animation-delay(@delay)
@@ -67,4 +67,4 @@ A whole bunch. There is a nice Table on Contents in the file so you can look thi
 
 ## Credits
 
-Credit to LESS Elements for the motivation and to CSS3Please.com for implementation.
+Credit to [LESS Elements](http://lesselements.com/) for the motivation and to [CSS3Please.com](http://css3please.com/) for implementation.
