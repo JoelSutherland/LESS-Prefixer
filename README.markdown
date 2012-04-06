@@ -32,7 +32,6 @@ A whole bunch. There is a nice Table of Contents in the file so you can look thi
 
 * .animation(@args)
 	* .animation-delay(@delay)
-	* .animation-delay(@delay)
 	* .animation-direction(@direction)
 	* .animation-duration(@duration)
 	* .animation-iteration-count(@count)
