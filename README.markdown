@@ -30,6 +30,8 @@ The convention is simple: when shorthand is available, arguments are not paramet
 
 A whole bunch. There is a nice Table of Contents in the file so you can look this up quickly while working in your project. Everything is even alphabetized.
 
+Additionally, each mixin uses the correct vendor prefixes as indicated by [CSS3Please.com](http://css3please.com/). They aren't just thrown in there willy-nilly.
+
 * .animation(@args)
 	* .animation-delay(@delay)
 	* .animation-direction(@direction)
