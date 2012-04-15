@@ -54,6 +54,7 @@ Additionally, each mixin uses the correct vendor prefixes as indicated by [CSS3P
 	* .column-width(@width)
 * .gradient(@default,@start,@stop) *
 * .opacity(@factor)
+* .text-shadow(@args)
 * .transform(@args)
 	* .rotate(@deg)
 	* .scale(@factor)

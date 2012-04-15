@@ -45,6 +45,7 @@
 			.translate(@x,@y)
 			.translate3d(@x,@y,@z)
 			.translateHardware(@x,@y) *
+		.text-shadow(@args)
 		.transition(@args)
 			.transition-delay(@delay)
 			.transition-duration(@duration)
@@ -210,6 +211,11 @@
 	filter: alpha(opacity=@iefactor);
 }
 
+
+/* Text Shadow */
+.text-shadow(@args){
+	text-shadow: @args;
+}
 
 /* Transforms */
 
