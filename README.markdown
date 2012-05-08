@@ -73,10 +73,10 @@ Additionally, each mixin uses the correct vendor prefixes as indicated by [CSS3P
 
 There are five different editions:
 
-* `prefixer.less` contains prefixes for popular browsers.
-* `prefixer-all.less` contains prefixes for all browsers.
-* `prefixer-nofilter.less` contains prefixes for popular browsers, with filters for IE ommitted.
-* `prefixer-nofilter-all.less` contains prefixes for all browsers, with filters for IE ommitted.
+* `prefixer.less` contains prefixes for all browsers.
+* `prefixer-nofilter.less` contains prefixes for all browsers, with filters for IE ommitted.
+* `prefixer-core.less` contains prefixes for only major rendering engines.
+* `prefixer-nofilter-core.less` contains prefixes for only major rendering engines, with filters for IE ommitted.
 * `prefixer-webkit.less` contains only prefixes for webkit browsers.
 
 ## Credits
