@@ -69,6 +69,16 @@ Additionally, each mixin uses the correct vendor prefixes as indicated by [CSS3P
 	* .transition-property(@property)
 	* .transition-timing-function(@function)
 
+## Editions
+
+There are five different editions:
+
+* `prefixer.less` contains prefixes for all browsers.
+* `prefixer-nofilter.less` contains prefixes for all browsers, with filters for IE ommitted.
+* `prefixer-core.less` contains prefixes for only major rendering engines.
+* `prefixer-nofilter-core.less` contains prefixes for only major rendering engines, with filters for IE ommitted.
+* `prefixer-webkit.less` contains only prefixes for webkit browsers.
+
 ## Credits
 
 Credit to [LESS Elements](http://lesselements.com/) for the motivation and to [CSS3Please.com](http://css3please.com/) for implementation.
