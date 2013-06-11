@@ -292,6 +292,20 @@
     -webkit-transform: translate3d(@x,@y,0);
     -moz-transform: translate3d(@x,@y,0);
 }
+.transform-origin(@args) {
+    -webkit-transform-origin: @args;
+    -moz-transform-origin: @args;
+    -ms-transform-origin: @args;
+    -o-transform-origin: @args;
+    transform-origin: @args;
+}
+.transform-style(@args) {
+    -webkit-transform-style: @args;
+    -moz-transform-style: @args;
+    -ms-transform-style: @args;
+    -o-transform-style: @args;
+    transform-style: @args;
+}
 
 
 /* Transitions */
