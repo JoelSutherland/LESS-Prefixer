@@ -86,7 +86,7 @@
     -ms-animation-direction: @direction;
     -o-animation-direction: @direction;
 }
-.animation-duration(@duration) {
+.animation-duration(@duration) { 
     -webkit-animation-duration: @duration;
     -moz-animation-duration: @duration;
     -ms-animation-duration: @duration;
@@ -257,13 +257,16 @@
 }
 
 
+
 // Opacity
 
 .opacity(@factor){
-    opacity: @factor;
-    @iefactor: @factor*100;
-    filter: alpha(opacity=@iefactor);
+	opacity: @factor;
+	@iefactor: @factor*100;
+	/* IE 5-7 */	filter: alpha(opacity=@iefactor); 
+	/* IE   8 */	-ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{iefactor})";
 }
+
 
 
 // Text Shadow
@@ -333,4 +336,36 @@
     -o-transition-timing-function: @function;
     transition-timing-function: @function;
 }
+
+
+
+
+/* Some more supports for older browser – CSS Hacks no prefixes */
+
+// min/max heigth/width Fallbach IE 6
+
+.min-width(@args) {
+	min-width:@args; width:auto !important; width:@args;
+}
+
+.max-width(@args) {
+	max-width:@args; width:auto !important; width:@args;
+}
+
+.min-height(@args) {
+	min-height:@args; width:auto !important; height:@args;
+}
+
+.max-height(@args) {
+	max-height:@args; width:auto !important; height:@args;
+}
+
+
+
+// display: inline-block support IE6, Firefox <2
+
+.dib() {
+	display:-moz-inline-stack; display:inline-block; zoom:1; *display:inline;
+}
+
 
