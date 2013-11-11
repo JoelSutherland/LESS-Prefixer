@@ -264,10 +264,10 @@
 // Opacity
 
 .opacity(@factor) {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    opacity: @factor;
     @iefactor: @factor*100;
     filter: alpha(opacity=@iefactor);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{iefactor})";
+    opacity: @factor;
 }
 
 
