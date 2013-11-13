@@ -70,9 +70,11 @@
 
 .animation(@args) {
     -webkit-animation: @args;
+    animation: @args;
 }
 .animation-delay(@delay) {
     -webkit-animation-delay: @delay;
+    animation-delay: @delay;
 }
 .animation-direction(@direction) {
     -webkit-animation-direction: @direction;
@@ -82,15 +84,19 @@
 }
 .animation-iteration-count(@count) {
     -webkit-animation-iteration-count: @count;
+    animation-iteration-count: @count;
 }
 .animation-name(@name) {
     -webkit-animation-name: @name;
+    animation-name: @name;
 }
 .animation-play-state(@state) {
     -webkit-animation-play-state: @state;
+    animation-play-state: @state;
 }
 .animation-timing-function(@function) {
     -webkit-animation-timing-function: @function;
+    animation-timing-function: @function;
 }
 
 
@@ -105,7 +111,6 @@
 // Border Radius
 
 .border-radius(@args) {
-    -webkit-border-radius: @args;
     border-radius: @args;
 
     -webkit-background-clip: padding-box;
@@ -157,8 +162,8 @@
     column-width: @width;
 }
 .column-rule(@args){
-    -webkit-column-rule: @rule;
-    column-rule: @rule;
+    -webkit-column-rule: @args;
+    column-rule: @args;
 }
 
 
@@ -240,6 +245,7 @@
 .translateHardware(@x,@y){
     .translate(@x,@y);
     -webkit-transform: translate3d(@x,@y,0);
+    transform: translate3d(@x,@y,0);
 }
 
 
