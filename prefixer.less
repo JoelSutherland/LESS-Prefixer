@@ -138,7 +138,6 @@
 
 .background-size(@args) {
     -webkit-background-size: @args;
-    -moz-background-size: @args;
     background-size: @args;
 }
 
@@ -146,10 +145,9 @@
 // Border Radius
 
 .border-radius(@args) {
+	-webkit-border-radius: @args;
     border-radius: @args;
 
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding-box;
     background-clip: padding-box;
 }
 
@@ -170,7 +168,6 @@
 .box-sizing(@args) {
     -webkit-box-sizing: @args;
     -moz-box-sizing: @args;
-    -ms-box-sizing: @args;
     box-sizing: @args;
 }
 .border-box(){
@@ -275,8 +272,8 @@
 
 .opacity(@factor) {
     @iefactor: @factor*100;
-    filter: ~"alpha(opacity=(@{iefactor}))";
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{iefactor})";
+	filter: ~"alpha(opacity=(@{iefactor}))";
     opacity: @factor;
 }
 
