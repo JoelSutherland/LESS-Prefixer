@@ -368,3 +368,30 @@
     transition-timing-function: @function;
 }
 
+//perspective
+
+.perspective (@perspective:1000) {
+  -webkit-perspective:@perspective;
+  -moz-perspective:@perspective;
+  -ms-perspective:@perspective;
+  -o-perspective:@perspective;
+  perspective:@perspective;
+}
+
+.perspective-origin (@origin) {
+  -webkit-perspective-origin:@origin;
+  -moz-perspective-origin:@origin;
+  -ms-perspective-origin:@origin;
+  -o-perspective-origin:@origin;
+  perspective-origin:@origin;
+}
+
+//backface-visibility
+
+.backface-visibility(@visibility:hidden) {
+  -webkit-backface-visibility:@visibility;
+  -moz-backface-visibility:@visibility;
+  -ms-backface-visibility:@visibility;
+  -o-backface-visibility:@visibility;
+  backface-visibility:@visibility;
+}
