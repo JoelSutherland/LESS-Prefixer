@@ -368,3 +368,13 @@
     transition-timing-function: @function;
 }
 
+// Selection control
+
+.user-select(@mode:none) {
+    -webkit-user-select: @mode;
+    -moz-user-select: @mode;
+    -ms-user-select: @mode;
+    user-select: @mode;
+}
+
+}
