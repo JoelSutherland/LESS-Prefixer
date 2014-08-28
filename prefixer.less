@@ -164,6 +164,29 @@
     .box-shadow(inset @args);
 }
 
+.box-shadow(@a1, @a2) {
+    -webkit-box-shadow: @a1, @a2;
+    box-shadow: @a1, @a2;
+}
+.inner-shadow(@a1, @a2) {
+    .box-shadow(inset @a1, @a2);
+}
+
+.box-shadow(@a1, @a2, @a3) {
+    -webkit-box-shadow: @a1, @a2, @a3;
+    box-shadow: @a1, @a2, @a3;
+}
+.inner-shadow(@a1, @a2, @a3) {
+    .box-shadow(inset @a1, @a2, @a3);
+}
+
+.box-shadow(@a1, @a2, @a3, @a4) {
+    -webkit-box-shadow: @a1, @a2, @a3, @a4;
+    box-shadow: @a1, @a2, @a3, @a4;
+}
+.inner-shadow(@a1, @a2, @a3, @a4) {
+    .box-shadow(inset @a1, @a2, @a3, @a4);
+}
 
 // Box Sizing
 
