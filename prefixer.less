@@ -56,6 +56,7 @@
 //          .transition-duration(@duration)
 //          .transition-property(@property)
 //          .transition-timing-function(@function)
+//      .user-select(@select)
 //
 //
 //
@@ -281,7 +282,7 @@
 // Text Shadow
 
 .text-shadow(@args) {
-    text-shadow: @args;
+    text-shadow+: @args;
 }
 
 
@@ -333,11 +334,11 @@
 // Transitions
 
 .transition(@args:200ms) {
-    -webkit-transition: @args;
-    -moz-transition: @args;
-    -o-transition: @args;
-    -ms-transition: @args;
-    transition: @args;
+    -webkit-transition+: @args;
+    -moz-transition+: @args;
+    -o-transition+: @args;
+    -ms-transition+: @args;
+    transition+: @args;
 }
 .transition-delay(@delay:0) {
     -webkit-transition-delay: @delay;
@@ -366,5 +367,20 @@
     -o-transition-timing-function: @function;
     -ms-transition-timing-function: @function;
     transition-timing-function: @function;
+}
+
+
+// Selections
+
+.user-select(@select:none) {
+    -webkit-user-select: @select;
+    -khtml-user-select: @select;
+    -moz-user-select: @select;
+    -ms-user-select: @select;
+    user-select: @select;
+
+    & when (@select = none) {
+        -webkit-touch-callout: @select;
+    }
 }
 
