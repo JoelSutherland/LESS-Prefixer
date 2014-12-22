@@ -333,11 +333,11 @@
 // Transitions
 
 .transition(@args:200ms) {
-    -webkit-transition: @args;
-    -moz-transition: @args;
-    -o-transition: @args;
-    -ms-transition: @args;
-    transition: @args;
+    -webkit-transition+: @args;
+    -moz-transition+: @args;
+    -o-transition+: @args;
+    -ms-transition+: @args;
+    transition+: @args;
 }
 .transition-delay(@delay:0) {
     -webkit-transition-delay: @delay;
