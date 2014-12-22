@@ -68,6 +68,7 @@ Additionally, each mixin uses the correct vendor prefixes as indicated by [CSS3P
 	* .transition-duration(@duration)
 	* .transition-property(@property)
 	* .transition-timing-function(@function)
+* .text-shadow(@select)
 
 ## Credits
 

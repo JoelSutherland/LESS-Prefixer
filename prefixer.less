@@ -56,6 +56,7 @@
 //          .transition-duration(@duration)
 //          .transition-property(@property)
 //          .transition-timing-function(@function)
+//      .user-select(@select)
 //
 //
 //
@@ -366,5 +367,20 @@
     -o-transition-timing-function: @function;
     -ms-transition-timing-function: @function;
     transition-timing-function: @function;
+}
+
+
+// Selections
+
+.user-select(@select:none) {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    & when (@select = none) {
+        -webkit-touch-callout: none;
+    }
 }
 
