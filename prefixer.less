@@ -56,8 +56,21 @@
 //          .transition-duration(@duration)
 //          .transition-property(@property)
 //          .transition-timing-function(@function)
-//
-//
+//      Flexbox: 
+//          .flex-block()
+//          .flex-inline()
+//              .flex-flow(@direction: row, @wrap: nowrap)
+//                  .flex-direction(@direction: row)
+//                  .flex-wrap(@wrap: nowrap)
+//              .justify-content(@justification)
+//              .align-items(@mode)
+//              .align-content(@alignment)
+//              .flex(@args: none)
+//                  .flex-grow(@grow: 1)
+//                  .flex-shrink(@shrink: 1)
+//                  .flex-basis(@basis: auto)
+//              .order(@num: 0)
+//              .align-self(@align: auto)
 //
 //  Credit to LESS Elements for the motivation and
 //  to CSS3Please.com for implementation.
@@ -145,7 +158,7 @@
 // Border Radius
 
 .border-radius(@args) {
-	-webkit-border-radius: @args;
+    -webkit-border-radius: @args;
     border-radius: @args;
 
     background-clip: padding-box;
@@ -273,7 +286,7 @@
 .opacity(@factor) {
     @iefactor: @factor*100;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{iefactor})";
-	filter: ~"alpha(opacity=(@{iefactor}))";
+    filter: ~"alpha(opacity=(@{iefactor}))";
     opacity: @factor;
 }
 
@@ -290,21 +303,21 @@
 .transform(@args) {
     -webkit-transform: @args;
     -moz-transform: @args;
-    -ms-transform: @args; 
+    -ms-transform: @args;
     -o-transform: @args;
     transform: @args;
 }
 .transform-origin(@args) {
     -webkit-transform-origin: @args;
     -moz-transform-origin: @args;
-    -ms-transform-origin: @args; 
+    -ms-transform-origin: @args;
     -o-transform-origin: @args;
     transform-origin: @args;
 }
 .transform-style(@style) {
     -webkit-transform-style: @style;
     -moz-transform-style: @style;
-    -ms-transform-style: @style; 
+    -ms-transform-style: @style;
     -o-transform-style: @style;
     transform-style: @style;
 }
@@ -368,3 +381,99 @@
     transition-timing-function: @function;
 }
 
+// Flexbox
+.flex-block() {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.flex-inline() {
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+}
+.flex-flow(@direction: row, @wrap: nowrap) {
+    -moz-flex-flow: @direction @wrap;
+    -ms-flex-direction: @direction;
+    -ms-flex-wrap: @wrap;
+    -webkit-flex-flow: @direction @wrap;
+    flex-flow: @direction @wrap;
+}
+.align-content(@alignment) {
+    -moz-align-content: @alignment;
+    -ms-align-content: @alignment;
+    -webkit-align-content: @alignment;
+    align-content: @alignment;
+}
+.flex-direction(@direction: row) {
+    -webkit-flex-direction: @direction;
+    -moz-flex-direction: @direction;
+    -ms-flex-direction: @direction;
+    flex-direction: @direction;
+}
+.flex-wrap(@wrap: nowrap) {
+    -webkit-flex-wrap: @wrap;
+    -moz-flex-wrap: @wrap;
+    -ms-flex-wrap: @wrap;
+    flex-wrap: @wrap;
+}
+.justify-content(@justification) {
+    -webkit-box-pack: @justification;
+    -moz-box-pack: @justification;
+    -ms-flex-pack: @justification;
+    -webkit-justify-content: @justification;
+    justify-content: @justification;
+}
+.align-items(@mode) {
+    -webkit-box-align: @alignment;
+    -moz-box-align: @alignment;
+    -ms-flex-align: @alignment;
+    -webkit-align-items: @alignment;
+    align-items: @alignment;
+}
+.flex(@args: none) {
+    -webkit-flex: @args;
+    -moz-flex: @args;
+    -ms-flex: @args;
+    -webkit-flex: @args;
+    flex: @args;
+
+}
+.order(@num: 0) {
+    -webkit-box-ordinal-group: @order;
+    -moz-box-ordinal-group: @order;
+    -ms-box-ordinal-group: @order;
+    -ms-flex-order: @order;
+    -webkit-order: @order;
+    -moz-order: @order;
+    -ms-order: @order;
+    order: @order;
+}
+.flex-grow(@grow: 1) {
+    -webkit-flex-grow: @grow;
+    -moz-flex-grow: @grow;
+    -ms-flex-grow: @grow;
+    -webkit-flex-grow: @grow;
+    flex-grow: @grow;
+}
+.flex-shrink(@shrink: 1) {
+    -webkit-flex-shrink: @shrink;
+    -moz-flex-shrink: @shrink;
+    -ms-flex-shrink: @shrink;
+    -webkit-flex-shrink: @shrink;
+    flex-shrink: @shrink;
+}
+.flex-basis(@basis: auto) {
+    -webkit-flex-basis: @basis;
+    -moz-flex-basis: @basis;
+    -ms-flex-basis: @basis;
+    -webkit-flex-basis: @basis;
+    flex-basis: @basis;
+}
+.align-self(@align: auto) {
+    -webkit-align-self: @align;
+    -moz-align-self: @align;
+    -ms-align-self: @align;
+    -webkit-align-self: @align;
+    align-self: @align;
+}
