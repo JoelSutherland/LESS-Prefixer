@@ -26,6 +26,7 @@
 //          .animation-name(@name)
 //          .animation-play-state(@state)
 //          .animation-timing-function(@function)
+//          .keyframes(@name, @frames) [@frames should be a block containing keyframes]
 //      .background-size(@args)
 //      .border-radius(@args)
 //      .box-shadow(@args)
@@ -144,6 +145,12 @@
     -ms-animation-timing-function: @function;
     -o-animation-timing-function: @function;
     animation-timing-function: @function;
+}
+.keyframes(@name, @frames) { 
+    @-webkit-keyframes @name { @frames(); }
+    @-moz-keyframes @name { @frames(); }
+    @-o-keyframes @name { @frames(); }
+    @keyframes @name { @frames(); }
 }
 
 
