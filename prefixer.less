@@ -3,6 +3,7 @@
 //---------------------------------------------------
 //
 //  All of the CSS3 fun, none of the prefixes!
+//  http://lessprefixer.com
 //
 //  As a rule, you can use the CSS properties you
 //  would expect just by adding a '.':
@@ -26,6 +27,7 @@
 //          .animation-name(@name)
 //          .animation-play-state(@state)
 //          .animation-timing-function(@function)
+//      .appearance(@args)
 //      .background-size(@args)
 //      .border-radius(@args)
 //      .box-shadow(@args)
@@ -56,7 +58,7 @@
 //          .transition-duration(@duration)
 //          .transition-property(@property)
 //          .transition-timing-function(@function)
-//      Flexbox: 
+//      Flexbox:
 //          .flex-block()
 //          .flex-inline()
 //              .flex-flow(@direction: row, @wrap: nowrap)
@@ -144,6 +146,15 @@
     -ms-animation-timing-function: @function;
     -o-animation-timing-function: @function;
     animation-timing-function: @function;
+}
+
+
+// Appearance
+
+.appearance(@args) {
+    -webkit-appearance: @args;
+    -moz-appearance: @args;
+    appearance: @args;
 }
 
 
