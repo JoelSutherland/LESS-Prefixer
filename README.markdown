@@ -40,6 +40,7 @@ Additionally, each mixin uses the correct vendor prefixes as indicated by [CSS3P
 	* .animation-name(@name)
 	* .animation-play-state(@state)
 	* .animation-timing-function(@function)
+	* .keyframes(@name, @frames)  (@frames should be a block containing keyframes)
 * .background-size(@args)
 * .border-radius(@args)
 * .box-shadow(@args)
