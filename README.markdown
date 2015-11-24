@@ -32,42 +32,62 @@ A whole bunch. There is a nice Table of Contents in the file so you can look thi
 
 Additionally, each mixin uses the correct vendor prefixes as indicated by [CSS3Please.com](http://css3please.com/). They aren't just thrown in there willy-nilly.
 
+* .keyframes(@name; @args)
 * .animation(@args)
-	* .animation-delay(@delay)
-	* .animation-direction(@direction)
-	* .animation-duration(@duration)
-	* .animation-iteration-count(@count)
-	* .animation-name(@name)
-	* .animation-play-state(@state)
-	* .animation-timing-function(@function)
+    * .animation-delay(@delay)
+    * .animation-direction(@direction)
+    * .animation-duration(@duration)
+    * .animation-fill-mode(@mode)
+    * .animation-iteration-count(@count)
+    * .animation-name(@name)
+    * .animation-play-state(@state)
+    * .animation-timing-function(@function)
 * .background-size(@args)
 * .border-radius(@args)
 * .box-shadow(@args)
-	* .inner-shadow(@args) *
+    * .inner-shadow(@args) *
 * .box-sizing(@args)
-	* .border-box() *
-	* .content-box() *
+    * .border-box() *
+    * .content-box() *
 * .columns(@args)
-	* .column-count(@count)
-	* .column-gap(@gap)
-	* .column-rule(@args)
-	* .column-width(@width)
+    * .column-count(@count)
+    * .column-gap(@gap)
+    * .column-rule(@args)
+    * .column-width(@width)
 * .gradient(@default,@start,@stop) *
-	* .linear-gradient-top(@default,@color1,@stop1,@color2,@stop2[,@color3,@stop3,@color4,@stop4]) *
-	* .linear-gradient-left(@default,@color1,@stop1,@color2,@stop2[,@color3,@stop3,@color4,@stop4]) *
+    * .linear-gradient-top(@default,@color1,@stop1,@color2,@stop2,[@color3,@stop3,@color4,@stop4])*
+    * .linear-gradient-left(@default,@color1,@stop1,@color2,@stop2,[@color3,@stop3,@color4,@stop4])*
+* .keyframes(@name; @args)
 * .opacity(@factor)
-* .text-shadow(@args)
 * .transform(@args)
-	* .rotate(@deg)
-	* .scale(@factor)
-	* .translate(@x,@y)
-	* .translate3d(@x,@y,@z)
-	* .translateHardware(@x,@y) *
+    * .transform-origin(@args)
+    * .transform-style(@style)
+    * .rotate(@deg)
+    * .scale(@factor)
+    * .translate(@x,@y)
+    * .translate3d(@x,@y,@z)
+    * .translateHardware(@x,@y) *
+* .text-shadow(@args)
 * .transition(@args)
-	* .transition-delay(@delay)
-	* .transition-duration(@duration)
-	* .transition-property(@property)
-	* .transition-timing-function(@function)
+    * .transition-delay(@delay)
+    * .transition-duration(@duration)
+    * .transition-property(@property)
+    * .transition-timing-function(@function)
+* Flexbox: 
+    * .flex-block()
+    * .flex-inline()
+         * .flex-flow(@direction: row, @wrap: nowrap)
+             * .flex-direction(@direction: row)
+             * .flex-wrap(@wrap: nowrap)
+    *     .justify-content(@justification)
+    *     .align-items(@mode)
+    *     .align-content(@alignment)
+    *     .flex(@args: none)
+             * .flex-grow(@grow: 1)
+             * .flex-shrink(@shrink: 1)
+             * .flex-basis(@basis: auto)
+    *     .order(@num: 0)
+    *     .align-self(@align: auto)
 
 ## Credits
 
