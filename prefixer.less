@@ -262,7 +262,7 @@
 
 .opacity(@factor) {
     @iefactor: @factor*100;
-    filter: ~"alpha(opacity=(@{iefactor}))";
+    filter: ~"alpha(opacity=@{iefactor})";
     opacity: @factor;
 }
 
@@ -368,7 +368,7 @@
 .justify-content(@justification) {
     -webkit-box-pack: @justification;
     -moz-box-pack: @justification;
-    -ms-flex-pack: @justification;
+    -ms-flex-pack: replace(@justification, "flex-", "");
     -webkit-justify-content: @justification;
     justify-content: @justification;
 }
