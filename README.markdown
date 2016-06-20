@@ -88,6 +88,8 @@ Additionally, each mixin uses the correct vendor prefixes as indicated by [CSS3P
              * .flex-basis(@basis: auto)
     *     .order(@num: 0)
     *     .align-self(@align: auto)
+* .user-select(@mode: none)
+    * .unselectable() 
 
 ## Credits
 

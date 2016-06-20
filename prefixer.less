@@ -73,6 +73,8 @@
 //                  .flex-basis(@basis: auto)
 //              .order(@num: 0)
 //              .align-self(@align: auto)
+//      .user-select(@mode)
+//          .unselectable() *
 //
 //  Credit to LESS Elements for the motivation and
 //  to CSS3Please.com for implementation.
@@ -152,6 +154,29 @@
     .box-shadow(inset @args);
 }
 
+.box-shadow(@a1, @a2) {
+    -webkit-box-shadow: @a1, @a2;
+    box-shadow: @a1, @a2;
+}
+.inner-shadow(@a1, @a2) {
+    .box-shadow(inset @a1, @a2);
+}
+
+.box-shadow(@a1, @a2, @a3) {
+    -webkit-box-shadow: @a1, @a2, @a3;
+    box-shadow: @a1, @a2, @a3;
+}
+.inner-shadow(@a1, @a2, @a3) {
+    .box-shadow(inset @a1, @a2, @a3);
+}
+
+.box-shadow(@a1, @a2, @a3, @a4) {
+    -webkit-box-shadow: @a1, @a2, @a3, @a4;
+    box-shadow: @a1, @a2, @a3, @a4;
+}
+.inner-shadow(@a1, @a2, @a3, @a4) {
+    .box-shadow(inset @a1, @a2, @a3, @a4);
+}
 
 // Box Sizing
 
@@ -424,4 +449,17 @@
     -ms-align-self: @align;
     -webkit-align-self: @align;
     align-self: @align;
+}
+
+
+// Selection control
+
+.user-select(@mode:none) {
+    -webkit-user-select: @mode;
+    -moz-user-select: @mode;
+    -ms-user-select: @mode;
+    user-select: @mode;
+}
+.unselectable() {
+    .user-select();
 }
