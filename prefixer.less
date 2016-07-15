@@ -204,56 +204,32 @@
 }
 .linear-gradient-top(@default,@color1,@stop1,@color2,@stop2) {
     background-color: @default;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(@stop1, @color1), color-stop(@stop2 @color2));
     background-image: -webkit-linear-gradient(top, @color1 @stop1, @color2 @stop2);
-    background-image: -moz-linear-gradient(top, @color1 @stop1, @color2 @stop2);
-    background-image: -ms-linear-gradient(top, @color1 @stop1, @color2 @stop2);
-    background-image: -o-linear-gradient(top, @color1 @stop1, @color2 @stop2);
     background-image: linear-gradient(top, @color1 @stop1, @color2 @stop2);
 }
 .linear-gradient-top(@default,@color1,@stop1,@color2,@stop2,@color3,@stop3) {
     background-color: @default;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(@stop1, @color1), color-stop(@stop2 @color2), color-stop(@stop3 @color3));
     background-image: -webkit-linear-gradient(top, @color1 @stop1, @color2 @stop2, @color3 @stop3);
-    background-image: -moz-linear-gradient(top, @color1 @stop1, @color2 @stop2, @color3 @stop3);
-    background-image: -ms-linear-gradient(top, @color1 @stop1, @color2 @stop2, @color3 @stop3);
-    background-image: -o-linear-gradient(top, @color1 @stop1, @color2 @stop2, @color3 @stop3);
     background-image: linear-gradient(top, @color1 @stop1, @color2 @stop2, @color3 @stop3);
 }
 .linear-gradient-top(@default,@color1,@stop1,@color2,@stop2,@color3,@stop3,@color4,@stop4) {
     background-color: @default;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(@stop1, @color1), color-stop(@stop2 @color2), color-stop(@stop3 @color3), color-stop(@stop4 @color4));
     background-image: -webkit-linear-gradient(top, @color1 @stop1, @color2 @stop2, @color3 @stop3, @color4 @stop4);
-    background-image: -moz-linear-gradient(top, @color1 @stop1, @color2 @stop2, @color3 @stop3, @color4 @stop4);
-    background-image: -ms-linear-gradient(top, @color1 @stop1, @color2 @stop2, @color3 @stop3, @color4 @stop4);
-    background-image: -o-linear-gradient(top, @color1 @stop1, @color2 @stop2, @color3 @stop3, @color4 @stop4);
     background-image: linear-gradient(top, @color1 @stop1, @color2 @stop2, @color3 @stop3, @color4 @stop4);
 }
 .linear-gradient-left(@default,@color1,@stop1,@color2,@stop2) {
     background-color: @default;
-    background-image: -webkit-gradient(linear, left top, left top, color-stop(@stop1, @color1), color-stop(@stop2 @color2));
     background-image: -webkit-linear-gradient(left, @color1 @stop1, @color2 @stop2);
-    background-image: -moz-linear-gradient(left, @color1 @stop1, @color2 @stop2);
-    background-image: -ms-linear-gradient(left, @color1 @stop1, @color2 @stop2);
-    background-image: -o-linear-gradient(left, @color1 @stop1, @color2 @stop2);
     background-image: linear-gradient(left, @color1 @stop1, @color2 @stop2);
 }
 .linear-gradient-left(@default,@color1,@stop1,@color2,@stop2,@color3,@stop3) {
     background-color: @default;
-    background-image: -webkit-gradient(linear, left top, left top, color-stop(@stop1, @color1), color-stop(@stop2 @color2), color-stop(@stop3 @color3));
     background-image: -webkit-linear-gradient(left, @color1 @stop1, @color2 @stop2, @color3 @stop3);
-    background-image: -moz-linear-gradient(left, @color1 @stop1, @color2 @stop2, @color3 @stop3);
-    background-image: -ms-linear-gradient(left, @color1 @stop1, @color2 @stop2, @color3 @stop3);
-    background-image: -o-linear-gradient(left, @color1 @stop1, @color2 @stop2, @color3 @stop3);
     background-image: linear-gradient(left, @color1 @stop1, @color2 @stop2, @color3 @stop3);
 }
 .linear-gradient-left(@default,@color1,@stop1,@color2,@stop2,@color3,@stop3,@color4,@stop4) {
     background-color: @default;
-    background-image: -webkit-gradient(linear, left top, left top, color-stop(@stop1, @color1), color-stop(@stop2 @color2), color-stop(@stop3 @color3), color-stop(@stop4 @color4));
     background-image: -webkit-linear-gradient(left, @color1 @stop1, @color2 @stop2, @color3 @stop3, @color4 @stop4);
-    background-image: -moz-linear-gradient(left, @color1 @stop1, @color2 @stop2, @color3 @stop3, @color4 @stop4);
-    background-image: -ms-linear-gradient(left, @color1 @stop1, @color2 @stop2, @color3 @stop3, @color4 @stop4);
-    background-image: -o-linear-gradient(left, @color1 @stop1, @color2 @stop2, @color3 @stop3, @color4 @stop4);
     background-image: linear-gradient(left, @color1 @stop1, @color2 @stop2, @color3 @stop3, @color4 @stop4);
 }
 
@@ -261,8 +237,6 @@
 // Opacity
 
 .opacity(@factor) {
-    @iefactor: @factor*100;
-    filter: ~"alpha(opacity=@{iefactor})";
     opacity: @factor;
 }
 
@@ -380,7 +354,6 @@
     align-items: @mode;
 }
 .flex(@args: none) {
-    -webkit-flex: @args;
     -moz-flex: @args;
     -ms-flex: @args;
     -webkit-flex: @args;
@@ -398,28 +371,24 @@
     order: @order;
 }
 .flex-grow(@grow: 1) {
-    -webkit-flex-grow: @grow;
     -moz-flex-grow: @grow;
     -ms-flex-grow: @grow;
     -webkit-flex-grow: @grow;
     flex-grow: @grow;
 }
 .flex-shrink(@shrink: 1) {
-    -webkit-flex-shrink: @shrink;
     -moz-flex-shrink: @shrink;
     -ms-flex-shrink: @shrink;
     -webkit-flex-shrink: @shrink;
     flex-shrink: @shrink;
 }
 .flex-basis(@basis: auto) {
-    -webkit-flex-basis: @basis;
     -moz-flex-basis: @basis;
     -ms-flex-basis: @basis;
     -webkit-flex-basis: @basis;
     flex-basis: @basis;
 }
 .align-self(@align: auto) {
-    -webkit-align-self: @align;
     -moz-align-self: @align;
     -ms-align-self: @align;
     -webkit-align-self: @align;
