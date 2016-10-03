@@ -8,6 +8,12 @@ LESS Prefixer is a set of [LESS](http://lesscss.org/) mixins that let you use ve
 
 ## How does it work?
 
+First include the less file provided like this:
+
+    @import ".../prefixer.less";
+
+Please note that `...` refers to the location where the file was installed.  If you instaled this package from Bower, replace the ellipsis with `bower_components/less-prefixer`.
+
 As a rule, you can use the CSS properties you would expect just by adding a '.' to start them and putting arguments afterwards.
 
 So you type this:
