@@ -196,6 +196,19 @@
     column-rule: @args;
 }
 
+// Filters
+
+.filter(@args) {
+	-webkit-filter: @args;
+	-moz-filter: @args;
+	-o-filter: @args;
+	-ms-filter: @args;
+	filter: @args;
+}
+
+.blur(@px) {
+	.filter(blur(@px));
+}
 
 // Gradients
 
@@ -399,4 +412,24 @@
     -ms-align-self: @align;
     -webkit-align-self: @align;
     align-self: @align;
+}
+
+// calculations
+
+// please note that to prevent the Less compiler from
+// touching the expression, it needs to be quoted
+// like this: .height-calc(~"100% - 10px");
+
+.height-calc(@s) {
+	height: -moz-calc(@s);
+	height: -webkit-calc(@s);
+	height: -o-calc(@s);
+	height: calc(@s);
+}
+
+.width-calc(@s) {
+	width: -moz-calc(@s);
+	width: -webkit-calc(@s);
+	width: -o-calc(@s);
+	width: calc(@s);
 }
