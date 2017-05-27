@@ -17,6 +17,7 @@
 //  (*) denotes a syntax-sugar helper
 //  -------------------------------------------------
 //
+//      .keyframes(@name; @args)
 //      .animation(@args)
 //          .animation-delay(@delay)
 //          .animation-direction(@direction)
@@ -41,7 +42,6 @@
 //      .gradient(@default,@start,@stop) *
 //          .linear-gradient-top(@default,@color1,@stop1,@color2,@stop2,[@color3,@stop3,@color4,@stop4])*
 //          .linear-gradient-left(@default,@color1,@stop1,@color2,@stop2,[@color3,@stop3,@color4,@stop4])*
-//      .keyframes(@name; @args)
 //      .opacity(@factor)
 //      .text-shadow(@args)
 //      .transform(@args)
@@ -82,7 +82,16 @@
 //  http://www.opensource.org/licenses/mit-license.php
 //
 //---------------------------------------------------
-
+// Animation
+.keyframes(@name;
+@args) {
+	@-webkit-keyframes @name {
+		@args();
+	}
+	@keyframes @name {
+		@args();
+	}
+}
 
 .animation(@arg0, @rest: endOfArgs, ...) {
 	@args: ~`"@{arguments}".replace(/[\[\]]|\,\sendOfArgs/g, '')`;
@@ -238,17 +247,6 @@
 	background-color: @default;
 	background-image: -webkit-linear-gradient(left, @color1 @stop1, @color2 @stop2, @color3 @stop3, @color4 @stop4);
 	background-image: linear-gradient(left, @color1 @stop1, @color2 @stop2, @color3 @stop3, @color4 @stop4);
-}
-
-// Animation
-.keyframes(@name;
-@args) {
-	@-webkit-keyframes @name {
-		@args();
-	}
-	@keyframes @name {
-		@args();
-	}
 }
 
 // Opacity
