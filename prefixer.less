@@ -39,6 +39,7 @@
 //          .column-gap(@gap)
 //          .column-rule(@args)
 //          .column-width(@width)
+//      .filter(@args)
 //      .gradient(@default,@start,@stop) *
 //          .linear-gradient-top(@default,@color1,@stop1,@color2,@stop2,[@color3,@stop3,@color4,@stop4])*
 //          .linear-gradient-left(@default,@color1,@stop1,@color2,@stop2,[@color3,@stop3,@color4,@stop4])*
@@ -203,6 +204,12 @@
 	-webkit-column-rule: @args;
 	-moz-column-rule: @args;
 	column-rule: @args;
+}
+
+// Filter
+.filter(@args) {
+    -webkit-filter: @args;
+    filter: @args;
 }
 
 // Gradients

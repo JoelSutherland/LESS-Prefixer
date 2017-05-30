@@ -60,6 +60,7 @@ Additionally, each mixin uses the correct vendor prefixes as indicated by [CSS3P
     * .column-gap(@gap)
     * .column-rule(@args)
     * .column-width(@width)
+* .filter(@args)
 * .gradient(@default,@start,@stop) 
     * .linear-gradient-top(@default,@color1,@stop1,@color2,@stop2,[@color3,@stop3,@color4,@stop4])*
     * .linear-gradient-left(@default,@color1,@stop1,@color2,@stop2,[@color3,@stop3,@color4,@stop4])*
