@@ -43,8 +43,8 @@
 //      .gradient(@default,@start,@stop) *
 //          .linear-gradient-top(@default,@color1,@stop1,@color2,@stop2,[@color3,@stop3,@color4,@stop4])*
 //          .linear-gradient-left(@default,@color1,@stop1,@color2,@stop2,[@color3,@stop3,@color4,@stop4])*
-//      .keyframes(@name; @args)
 //      .opacity(@factor)
+//      .text-shadow(@args)
 //      .transform(@args)
 //          .transform-origin(@args)
 //          .transform-style(@style)
@@ -53,12 +53,12 @@
 //          .translate(@x,@y)
 //          .translate3d(@x,@y,@z)
 //          .translateHardware(@x,@y) *
-//      .text-shadow(@args)
 //      .transition(@args)
 //          .transition-delay(@delay)
 //          .transition-duration(@duration)
 //          .transition-property(@property)
 //          .transition-timing-function(@function)
+//      .user-select(@select)
 //      Flexbox: 
 //          .flex-block()
 //          .flex-inline()
@@ -94,7 +94,8 @@
 	}
 }
 
-.animation(@args) {
+.animation(@arg0, @rest: endOfArgs, ...) {
+	@args: ~`"@{arguments}".replace(/[\[\]]|\,\sendOfArgs/g, '')`;
 	-webkit-animation: @args;
 	animation: @args;
 }
@@ -151,13 +152,15 @@
 }
 
 // Box Shadows
-.box-shadow(@args) {
+.box-shadow(@arg0, @rest: endOfArgs, ...) {
+	@args: ~`"@{arguments}".replace(/[\[\]]|\,\sendOfArgs/g, '')`;
 	-webkit-box-shadow: @args;
 	box-shadow: @args;
 }
 
-.inner-shadow(@args) {
-	.box-shadow(inset @args);
+.inner-shadow(@arg0, @rest: endOfArgs, ...) {
+  @innerArgs: ~`"@{arguments}".replace(/[\[\]]|\,\endOfArgs/g, '').replace(/^/g,'inset ').replace(/,/g,', inset')`;
+  .box-shadow(@innerArgs);
 }
 
 // Box Sizing
@@ -253,21 +256,15 @@
 	background-image: linear-gradient(left, @color1 @stop1, @color2 @stop2, @color3 @stop3, @color4 @stop4);
 }
 
-// UserSelect
-.user-select(@select: auto) {
-	-webkit-user-select: @select;
-	-moz-user-select: @select;
-	-ms-user-select: @select;
-	user-select: @select;
-}
-
 // Opacity
 .opacity(@factor) {
   opacity: @factor;
 }
 
 // Text Shadow
-.text-shadow(@args) {
+
+.text-shadow(@arg0, @rest: endOfArgs, ...) {
+	@args: ~`"@{arguments}".replace(/[\[\]]|\,\sendOfArgs/g, '')`;
 	text-shadow: @args;
 }
 
@@ -340,6 +337,14 @@
 
 .transition-timing-function(@function: ease) {
 	transition-timing-function: @function;
+}
+
+// UserSelect
+.user-select(@select: auto) {
+	-webkit-user-select: @select;
+	-moz-user-select: @select;
+	-ms-user-select: @select;
+	user-select: @select;
 }
 
 // Flexbox
