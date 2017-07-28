@@ -43,6 +43,7 @@
 //      .gradient(@default,@start,@stop) *
 //          .linear-gradient-top(@default,@color1,@stop1,@color2,@stop2,[@color3,@stop3,@color4,@stop4])*
 //          .linear-gradient-left(@default,@color1,@stop1,@color2,@stop2,[@color3,@stop3,@color4,@stop4])*
+//      .input-placeholder(@ruleset)
 //      .keyframes(@name; @args)
 //      .opacity(@factor)
 //      .transform(@args)
@@ -251,6 +252,34 @@
 	background-color: @default;
 	background-image: -webkit-linear-gradient(left, @color1 @stop1, @color2 @stop2, @color3 @stop3, @color4 @stop4);
 	background-image: linear-gradient(left, @color1 @stop1, @color2 @stop2, @color3 @stop3, @color4 @stop4);
+}
+
+// Input placeholder
+.input-placeholder(@ruleset){
+    ::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        @ruleset();
+    }
+
+    :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        @ruleset();
+    }
+
+    ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        @ruleset();
+    }
+
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        @ruleset();
+    }
+
+    ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        @ruleset();
+    }
 }
 
 // UserSelect
