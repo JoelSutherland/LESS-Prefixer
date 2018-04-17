@@ -18,17 +18,22 @@ As a rule, you can use the CSS properties you would expect just by adding a '.' 
 
 So you type this:
 
-	div {
-		.box-shadow(0px 0px 10px rgba(255,0,0,.5));
-	}
+```css
+div {
+	.user-select(none);
+}
+```
 
 and you get this through the beauty of LESS:
 
-	div {
-		-webkit-box-shadow: 0px 0px 10px rgba(255,0,0,.5);
-		-moz-box-shadow: 0px 0px 10px rgba(255,0,0,.5);
-		box-shadow: 0px 0px 10px rgba(255,0,0,.5);
-	}
+```css
+div {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+```
 
 The convention is simple: when shorthand is available, arguments are not parameterized. Learn CSS, not LESS Prefixer.
 
